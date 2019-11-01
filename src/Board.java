@@ -5,7 +5,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Board {
@@ -21,7 +20,7 @@ public class Board {
 
 
 
-    public Board(Stage stage, int stageWidth){
+    public Board (Stage stage, int stageWidth){
         this.stage = stage;
         this.stageWidth = stageWidth;
         this.gp = new GridPane();
@@ -36,6 +35,8 @@ public class Board {
         gp.setVgap(0);
         gp.setHgap(0);
 
+
+        // populate multidimensional array boardNodes with pieces (doesn't put anything on the gui)
         for (int i=0; i < 8; i++){
             for (int j=0; j < 8; j++) {
                 if (j == 1) boardNodes[i][j] = new Pawn(p1, this);
@@ -56,10 +57,9 @@ public class Board {
                 }
             }
         }
-
-
-
         putTilesOnBoard();
+
+
 //        testPicture("https://www.pinclipart.com/picdir/big/183-1838874_white-chess-pawn-comments-vector-graphics-clipart.png", 0, 5);
 //        testPicture("https://www.pinclipart.com/picdir/big/60-602746_chess-piece-bishop-king-chessboard-alfil-ajedrez-para.png", 1, 5);
 //        testPicture("https://www.pinclipart.com/picdir/big/23-237242_rook-clip-art-clipart-chess-rook-clip-art.png", 2, 5);
@@ -75,6 +75,9 @@ public class Board {
     }
 
 
+    /*
+    unfinished, called when a tile is clicked, check if there is a piece on deck and move piece to that tile
+     */
     public void handleOnDeck(int i, int j){
         boardNodes[i][j] = this.onDeck;
         for (Node n : gp.getChildren()){
@@ -84,8 +87,9 @@ public class Board {
     }
 
 
-
-
+    /*
+    used to test putting pictures on the board
+     */
     public void testPicture(String url, int i, int j){
         Image image = new Image(url);
         ImageView imageView = new ImageView(image);
@@ -99,15 +103,17 @@ public class Board {
     }
 
 
-
+    /*
+    populates board with appropriate tiles and pieces
+     */
     public void putTilesOnBoard() {
         boolean isWhite = true;
         Color white = Color.WHITE;
-        Color black = Color.GREY;
+        Color grey = Color.GREY;
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                     if (isWhite) gp.add(new Tile(white, i, j, this).tile, i, j);
-                    else gp.add(new Tile(black, i, j, this).tile, i, j);
+                    else gp.add(new Tile(grey, i, j, this).tile, i, j);
                     isWhite = !isWhite;
                     if (boardNodes[i][j] != null){
                         gp.add(boardNodes[i][j].getImageView(), i, j);
