@@ -1,4 +1,8 @@
+package Pieces;
+
 import javafx.scene.image.ImageView;
+
+import java.util.ArrayList;
 
 public abstract class Piece extends ImageView {
     public String imgUrl;
@@ -6,6 +10,6 @@ public abstract class Piece extends ImageView {
     public boolean isWhite;
     public boolean isCaptureed;
 
-    public Position[] getLegalMoves();
+    public abstract ArrayList<Position> getLegalMoves();
 
 }
