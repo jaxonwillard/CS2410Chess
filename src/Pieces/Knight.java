@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 
 public class Knight extends Piece {
-    Knight(Position p, boolean isWhite) {
+    public Knight(Position p, boolean isWhite) {
         this.pos = p;
         this.isWhite = isWhite;
         this.imgUrl = this.isWhite ?

@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 
 public class Pawn extends Piece {
-    Pawn(Position p, boolean isWhite) {
+    public Pawn(Position p, boolean isWhite) {
         this.pos = p;
         this.isWhite = isWhite;
         this.imgUrl = this.isWhite ?

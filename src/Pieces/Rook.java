@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 
 public class Rook extends Piece {
-    Rook(Position p, boolean isWhite) {
+    public Rook(Position p, boolean isWhite) {
         this.pos = p;
         this.isWhite = isWhite;
         this.imgUrl = this.isWhite ?

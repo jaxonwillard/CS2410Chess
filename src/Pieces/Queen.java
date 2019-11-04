@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 
 public class Queen extends Piece {
-    Queen(Position p, boolean isWhite) {
+    public Queen(Position p, boolean isWhite) {
         this.pos = p;
         this.isWhite = isWhite;
         this.imgUrl = this.isWhite ?

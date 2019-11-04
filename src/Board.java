@@ -1,3 +1,6 @@
+import Pieces.Pawn;
+import Pieces.Piece;
+import Pieces.*;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
