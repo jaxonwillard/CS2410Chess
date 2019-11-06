@@ -1,8 +1,8 @@
 package src.Pieces;
 
 import javafx.scene.image.ImageView;
+import src.Position;
 
-import javax.swing.text.Position;
 import java.util.ArrayList;
 
 public abstract class Piece extends ImageView {

@@ -2,8 +2,8 @@ package src.Pieces;
 
 import javafx.scene.image.Image;
 
-import javax.swing.text.Position;
 import java.util.ArrayList;
+import src.Position;
 
 public class King extends Piece {
     public King(Position p, boolean isWhite) {

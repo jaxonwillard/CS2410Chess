@@ -2,8 +2,8 @@ package src.Pieces;
 
 import javafx.scene.image.Image;
 
-import javax.swing.text.Position;
 import java.util.ArrayList;
+import src.Position;
 
 public class Knight extends Piece {
     public Knight(Position p, boolean isWhite) {

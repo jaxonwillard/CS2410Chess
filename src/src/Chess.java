@@ -7,10 +7,9 @@ import javafx.stage.Stage;
 public class Chess extends Application{
     int width = 650;
 
-
-//    public static void main(String[] args) {
-//        System.out.println(";lkj");
-//    }
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
     public void start(Stage stage) {
         stage.setWidth(width);
         stage.setHeight(width);
