@@ -1,4 +1,4 @@
-package Pieces;
+package src;
 
 public class Position {
     public int col;

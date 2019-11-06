@@ -1,19 +1,23 @@
+package src;
+
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Chess extends Application {
+public class Chess extends Application{
     int width = 650;
-    public void start(Stage stage){
+
+
+//    public static void main(String[] args) {
+//        System.out.println(";lkj");
+//    }
+    public void start(Stage stage) {
         stage.setWidth(width);
         stage.setHeight(width);
+        Scene scene = new Scene(new Tile(false, new Position(0, 0), new Board(stage, width)));
+        stage.setScene(scene);
+        stage.show();
+
 
 
         final long startTime = System.currentTimeMillis();

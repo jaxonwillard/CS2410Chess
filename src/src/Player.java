@@ -1,5 +1,6 @@
+package src;
+
 import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
 
 public class Player {
     public boolean isWhite;

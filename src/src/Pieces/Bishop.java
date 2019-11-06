@@ -1,7 +1,8 @@
-package Pieces;
+package src.Pieces;
 
 import javafx.scene.image.Image;
 
+import javax.swing.text.Position;
 import java.util.ArrayList;
 
 public class Bishop extends Piece {
